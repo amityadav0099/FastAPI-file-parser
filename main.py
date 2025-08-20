@@ -83,6 +83,14 @@ from sqlalchemy import (
 )
 from sqlalchemy.orm import declarative_base, sessionmaker, Mapped, mapped_column
 
+from fastapi import FastAPI
+
+# Create the app
+
+
+# Root endpoint
+
+
 # Optional SSE support
 try:
     from sse_starlette.sse import EventSourceResponse
@@ -172,7 +180,16 @@ async def lifespan(app: FastAPI):
                 progress_store[rec.id] = {"status": rec.status, "progress": 0}
     yield
 
-app = FastAPI(title="File Parser CRUD API with Progress", version="1.0.0", lifespan=lifespan)
+app = FastAPI(
+    title="File Parser CRUD API with Progress",
+    version="1.0.0",
+    lifespan=lifespan
+)
+
+@app.get("/")
+def read_root():
+    return {"message": "Welcome to File Parser API 🚀"}
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
