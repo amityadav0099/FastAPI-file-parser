@@ -16,7 +16,7 @@ A simple **FastAPI-based API** that allows parsing and processing uploaded files
 
 ### 1. Clone the repository  
 ```bash
-git clone https://github.com/ayushsjs/file-parser-api.git
+git clone https://github.com/your_username/file-parser-api.git
 cd file-parser-api
 
 2. Create a virtual environment
@@ -81,5 +81,5 @@ Language: Python 3.10+
 
 
 
-Author
-Ayush Mishra (https://github.com/ayushsjs)
+Author Name
+Amit Yadav (https://github.com/amityadav0099)
